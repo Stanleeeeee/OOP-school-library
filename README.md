@@ -1,57 +1,56 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# OOP-school-library
 
-> Description the project.
-
+> **oop_school_library** is library management system that Implements OOP concepts of encapsulation and inheritance.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- [x] Programming Language: Ruby
+- [x] Linter: [Rubocop](https://rubocop.org/)
+- [x] VS Code
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
+- [x] A web browser like Google Chrome.
+- [x] A code editor like Visual Studio Code with Git and Ruby.
+
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
+
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
+
 ### Setup
+
+Clone the repository using the GitHub link provided below.
 
 ### Install
 
+In the terminal, go to your file directory and run this command.
+
+```
+$ git clone https://github.com/Stanleeeeee/OOP-school-library.git
+```
+
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
-
+Kindly modify the files as needed.
 ## Authors
 
-👤 **Author1**
+👤 **Emmanuel Moombe**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: https://github.com/stanleeeeee
+- Twitter: https://twitter.com/Stanmega89
+- LinkedIn: https://www.linkedin.com/in/stanley-ezeoke/
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -68,8 +67,9 @@ Give a ⭐️ if you like this project!
 - Inspiration
 - etc
 
+
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._

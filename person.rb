@@ -1,7 +1,7 @@
 require './nameable'
 
-class Person
-  def initalize(age, name = 'Unknown', parent_permission: true)
+class Person < Nameable
+  def initialize(age, name = 'Unknown', parent_permission: true)
     super()
     @id = Random.rand(1...1000)
     @name = name

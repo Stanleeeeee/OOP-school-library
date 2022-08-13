@@ -43,7 +43,6 @@ class App
       'Thank you for using this app! 👍😊'
     else
       puts '⚠️ Wrong input'
-      puts 'Please enter a valid option from the following: '
       run
     end
   end
@@ -107,21 +106,17 @@ class App
   end
 
   def create_teacher
-    age = -1
-    print 'Enter Age: '
-    while age <= 0
-      age = gets.chomp.to_i
-      print 'Enter valid age for Teacher: ' if age <= 0
-    end
+    print 'Specialization: '
+    specialization = gets.chomp
+    print 'Age: '
+    age = gets.chomp.to_i
+    print 'Name: '
+    name = gets.chomp
+  end
 
-    print 'Enter Name: '
-    name = gets.chomp.strip.capitalize
-
-    print 'Enter Specialization: '
-    specialization = gets.chomp.strip.capitalize
-
-    @people << Teacher.new(age, name, specialization)
-    puts ' Teacher was created successfuly!🧑‍🏫👋' '
+    teacher = Teacher.new(specialization, age, name, parent_permission: permission)
+    @people.push(teacher)
+    puts 'A teacher created successfully 🧑‍🏫👋'
   end
 
   def create_book
@@ -155,18 +150,12 @@ class App
     run
   end
 
-  def list_rentals
-    puts
-    people
-    puts 'Choose person ID: '
-    entry = gets.chomp.to_i
-
-    puts 'Rentals'.upcase
-    puts
-    @people.each do |person|
-      next unless person.id == entry
-
-      @all_rentals.each do |rental|
-        puts "Rental date: #{rental.date} - #{rental.book} by #{rental.person}"
-      end
+  def list_rental
+    print 'ID of person: '
+    id = gets.chomp.to_i
+    rentals = @rentals.select { |rental| rental.person.id == id }
+    p rentals
+    rentals.each { |item| puts "Date: #{item.date}, Book: #{item.book.title}, by: #{item.book.author}" }
+    run
+  end
 end

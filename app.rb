@@ -151,11 +151,19 @@ class App
   end
 
   def list_rental
-    print 'ID of person: '
-    id = gets.chomp.to_i
-    rentals = @rentals.select { |rental| rental.person.id == id }
-    p rentals
-    rentals.each { |item| puts "Date: #{item.date}, Book: #{item.book.title}, by: #{item.book.author}" }
-    run
+    puts
+    person
+    puts 'Choose person ID: '
+    entry = gets.chomp.to_i
+
+    puts 'Rental'.upcase
+    puts
+    @people.each do |person|
+      next unless person.id == entry
+
+      @all_rentals.each do |rental|
+        puts "Rental date: #{rental.date} - #{rental.book} by #{rental.person}"
+      end
+    end
   end
 end

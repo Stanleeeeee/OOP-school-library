@@ -156,6 +156,8 @@ class App
     puts 'Choose person ID: '
     entry = gets.chomp.to_i
 
+    # rubocop:disable Metrics/ClassLength, Metrics/CyclomaticComplexity
+
     puts 'Rental'.upcase
     puts
     @people.each do |person|
@@ -167,3 +169,5 @@ class App
     end
   end
 end
+
+# rubocop:enable Metrics/ClassLength, Metrics/CyclomaticComplexity

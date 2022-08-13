@@ -107,24 +107,21 @@ class App
   end
 
   def create_teacher
-    print 'Specialization: '
-    specialization = gets.chomp
-    print 'Age: '
-    age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-    print 'Has parent permission? [Y/N]'
-    permission = gets.chomp.upcase
-    case permission
-    when 'Y'
-      permission = true
-    when 'N'
-      permission = false
+    age = -1
+    print 'Enter Age: '
+    while age <= 0
+      age = gets.chomp.to_i
+      print 'Enter valid age for Teacher: ' if age <= 0
     end
 
-    teacher = Teacher.new(specialization, age, name, parent_permission: permission)
-    @people.push(teacher)
-    puts 'A teacher created successfully 🧑‍🏫👋'
+    print 'Enter Name: '
+    name = gets.chomp.strip.capitalize
+
+    print 'Enter Specialization: '
+    specialization = gets.chomp.strip.capitalize
+
+    @people << Teacher.new(age, name, specialization)
+    puts ' Teacher was created successfuly!🧑‍🏫👋' '
   end
 
   def create_book
@@ -158,11 +155,18 @@ class App
     run
   end
 
-  def list_rental
-    print 'ID of person: '
-    id = gets.chomp.to_i
+  def list_rentals
+    puts
+    people
+    puts 'Choose person ID: '
+    entry = gets.chomp.to_i
 
-    rentals.each { |item| puts "Date: #{item.date}, Book: #{item.book.title}, by: #{item.book.author}" }
-    run
-  end
+    puts 'Rentals'.upcase
+    puts
+    @people.each do |person|
+      next unless person.id == entry
+
+      @all_rentals.each do |rental|
+        puts "Rental date: #{rental.date} - #{rental.book} by #{rental.person}"
+      end
 end

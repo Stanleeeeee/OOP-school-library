@@ -21,4 +21,3 @@ class Book
     }.to_json(*args)
   end
 end
-

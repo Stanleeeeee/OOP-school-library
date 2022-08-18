@@ -20,4 +20,3 @@ class Teacher < Person
     }.to_json(*args)
   end
 end
-

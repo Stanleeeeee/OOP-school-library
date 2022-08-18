@@ -1,0 +1,1 @@
+[{"json_class":"Rental","date":12,"book":{"json_class":"Book","title":"The lion of AFG","author":"Zamir"},"person":{"json_class":"Student","id":587,"name":"stanley","age":22,"parent_permission":true}}]
